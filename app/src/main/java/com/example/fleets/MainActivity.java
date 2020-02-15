@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                                 isSuccess = false;
                             }
 
-                            if (motorista.cargo.equals("Motorista")) {
+                           else if (motorista.cargo.equals("Motorista")) {
 
                                 Intent intent = new Intent(MainActivity.this, MenuPrincipal.class);
                                 startActivity(intent);

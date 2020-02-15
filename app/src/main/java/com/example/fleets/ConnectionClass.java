@@ -34,7 +34,6 @@ public class ConnectionClass {
         } catch (Exception e) {
             Log.e("error 3 : ", e.getMessage());
         }
-
         return conn;
     }
 }

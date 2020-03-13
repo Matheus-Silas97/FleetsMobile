@@ -40,13 +40,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
             }
         });
-        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-
-            }
-        });
+        builder.setNegativeButton("Cancelar", null);
         AlertDialog alert = builder.create();
         alert.show();
     }
@@ -64,13 +58,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
             }
         });
-        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-
-            }
-        });
+        builder.setNegativeButton("Cancelar", null);
         AlertDialog alert = builder.create();
         alert.show();
     }

@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         pbbar = (ProgressBar) findViewById(R.id.pbbar);
         pbbar.setVisibility(View.GONE);
 
-
         btt_acessar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,9 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 z = "Acesso Permitido Apenas para Motoristas!";
                                 isSuccess = false;
-                            }
-
-                           else if (motorista.cargo.equals("Motorista")) {
+                            } else if (motorista.cargo.equals("Motorista")) {
 
                                 Intent intent = new Intent(MainActivity.this, MenuPrincipal.class);
                                 startActivity(intent);
@@ -135,6 +132,21 @@ public class MainActivity extends AppCompatActivity {
 
         public Motorista RetornaMotorista() {
             return motorista;
+        }
+    }
+
+    public void acessarSemCadastro(View view) {
+        String userid = txt_login.getText().toString();
+        String password = txt_senha.getText().toString();
+
+        if (userid.equals("") || password.equals("")) {
+            Toast.makeText(getApplicationContext(), "Preencher os campos corretamente", Toast.LENGTH_SHORT).show();
+        } else if (userid.equals("adm") && password.equals("1234")) {
+            Intent intent = new Intent(this, MenuPrincipal.class);
+            startActivity(intent);
+            Toast.makeText(getApplicationContext(), "Acesso Permitido para teste", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "Acesso apenas para teste, ACESSO NEGADO", Toast.LENGTH_SHORT).show();
         }
     }
 }

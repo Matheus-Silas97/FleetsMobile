@@ -19,11 +19,11 @@ public class rotasDetalhes extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);      //Ativar o botão
         getSupportActionBar().setTitle("Viagem");     //Titulo para ser exibido na  Action Bar em frente à seta
 
-        detID = (TextView) findViewById(R.id.detID);
-        detVei = (TextView) findViewById(R.id.detVei);
-        detOri = (TextView) findViewById(R.id.detOri);
-        detDest = (TextView) findViewById(R.id.detDest);
-        detObs = (TextView) findViewById(R.id.detObs);
+        detID = findViewById(R.id.detID);
+        detVei = findViewById(R.id.detVei);
+        detOri = findViewById(R.id.detOri);
+        detDest = findViewById(R.id.detDest);
+        detObs = findViewById(R.id.detObs);
     }
 
     //seta de retorno para menu principal

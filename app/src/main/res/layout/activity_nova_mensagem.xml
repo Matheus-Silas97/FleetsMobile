@@ -7,31 +7,14 @@
     android:background="@color/corBackground"
     tools:context=".NovaMensagem">
 
-    <EditText
-        android:id="@+id/txt_mensagem"
-        android:layout_width="352dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="204dp"
-        android:ems="10"
-        android:hint="Mensagem"
-        android:inputType="textPersonName"
-        android:textColor="@color/texto"
-        android:textColorHighlight="@color/corfontes"
-        android:textColorHint="@color/corfontes"
-        android:textColorLink="@color/corfontes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btt_enviarmensagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="212dp"
-        android:background="@color/corfontes"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/background_btt"
         android:text="Enviar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/pbbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
@@ -42,12 +25,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="180dp"
-        android:layout_marginTop="56dp"
         android:layout_marginEnd="183dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:textColorHint="@color/corfontes"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btt_enviarmensagem" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_mensagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escreva sua Mensagem"
+            android:inputType="textMultiLine"
+            android:singleLine="false"
+            android:textColor="@color/corfontes"
+            android:textColorHighlight="@color/corfontes"
+            android:textColorHint="@color/corfontes"
+            android:textColorLink="@color/corfontes" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

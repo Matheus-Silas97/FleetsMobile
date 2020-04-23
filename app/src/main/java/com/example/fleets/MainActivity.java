@@ -36,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         connectionClass = new ConnectionClass();
-        txt_login = (TextView) findViewById(R.id.txt_login);
-        txt_senha = (TextView) findViewById(R.id.txt_senha);
-        btt_acessar = (Button) findViewById(R.id.btt_acessar);
-        pbbar = (ProgressBar) findViewById(R.id.pbbar);
+        txt_login = findViewById(R.id.txt_login);
+        txt_senha = findViewById(R.id.txt_senha);
+        btt_acessar = findViewById(R.id.btt_acessar);
+        pbbar = findViewById(R.id.pbbar);
         pbbar.setVisibility(View.GONE);
 
         btt_acessar.setOnClickListener(new View.OnClickListener() {
